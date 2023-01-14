@@ -10,9 +10,6 @@ def create(string = ''):
     elif (i == '-' and currentNumber == '') and (len(token) == 0 or token[len(token)-1] == '('):
       token.append('0')
       token.append(i)
-    elif i == '%': 
-      token.append('1')
-      token.append(i)
     else: 
       if i != '(' and currentNumber != '': token.append(currentNumber)
       token.append(i)
