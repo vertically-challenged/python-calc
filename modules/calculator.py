@@ -9,8 +9,7 @@ def calc(mathExpString = ''):
   operations = []
   token = tokenCreator.create(mathExpString)
   pToken = pTokenCreator.create(token)
-  print(f'pToken: {pToken}')
-
+  
   for i in pToken:
     if isNumeric.check(i): numbers.append(i)
     else:
