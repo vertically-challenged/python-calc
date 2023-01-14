@@ -15,9 +15,8 @@ def create(token):
       while len(stack) > 0 and stack[len(stack)-1] != '(':
         pToken.append(stack.pop())
       if len(stack) > 0: stack.pop()
-    else: 
-      if len(stack) > 0 and stack[len(stack)-1] == '(': stack.pop()
-      while len(stack) > 1 + countBracket and (operationPriorities.priorities[stack[len(stack)-1]] >= operationPriorities.priorities(i)):
+    else:  
+      while len(stack) > 0 and stack[len(stack)-1] != '(' and (operationPriorities.priorities[stack[len(stack)-1]] >= operationPriorities.priorities[i]):
         pToken.append(stack.pop())
       stack.append(i)
   
